@@ -6,6 +6,7 @@
 :root {
 	--primaryColor: #af9a7d;
 	--mainBlack: #222;
+	--mainSpacing: 3px;
 }
 
 /* globals */
@@ -37,8 +38,38 @@ body {
 	cursor: pointer;
 	color: var(--primaryColor);
 }
+.nav-links {
+	list-style-type: none;
+	height: 0;
+	overflow: hidden;
+}
+.nav-links a {
+	display: block;
+	text-align: center;
+	padding: 1rem 0;
+	text-decoration: none;
+	color: var(--mainBlack);
+	font-size: 1rem; /* 16px */
+	font-weight: 600;
+	letter-spacing: var(--mainSpacing);
+}
+.nav-links a:hover {
+	color: var(--primaryColor);
+}
 @media screen and (min-width: 768px) {
 	.nav-btn {
 		display: none;
+	}
+	.nav-center {
+		display: flex;
+	}
+	.nav-links {
+		height: auto;
+		display: flex;
+		margin-left: 4rem;
+	}
+	.nav-links a {
+		margin: 0 1rem;
+		padding: 0.5rem 0;
 	}
 }
