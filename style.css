@@ -7,6 +7,7 @@
 	--primaryColor: #af9a7d;
 	--mainBlack: #222;
 	--mainSpacing: 3px;
+	--mainTransition: all 0.3s linear;
 }
 
 /* globals */
@@ -17,6 +18,26 @@ body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	line-height: 1.4;
 }
+h1 {
+	font-size: 3rem;
+	line-height: 1;
+	margin-bottom: 0.5rem;
+}
+.primary-btn {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: var(--mainSpacing);
+	color: var(--mainBlack);
+	background: var(--primaryColor);
+	padding: 0.4rem 0.9rem;
+	border: 3px solid var(--primaryColor);
+	transition: var(--mainTransition);
+}
+.primary-btn:hover {
+	background: transparent;
+	color: var(--primaryColor);
+}
 
 /* NAVBAR */
 .navbar {
@@ -25,6 +46,7 @@ body {
 	left: 0;
 	width: 100%;
 	padding: 0.75rem 2rem; /* 12px 32px */
+	background: white;
 	z-index: 10;
 }
 .nav-header {
@@ -52,6 +74,7 @@ body {
 	font-size: 1rem; /* 16px */
 	font-weight: 600;
 	letter-spacing: var(--mainSpacing);
+	transition: var(--mainTransition);
 }
 .nav-links a:hover {
 	color: var(--primaryColor);
@@ -73,5 +96,50 @@ body {
 	.nav-links a {
 		margin: 0 1rem;
 		padding: 0.5rem 0;
+	}
+}
+
+/* HERO */
+.hero {
+	min-height: calc(100vh - 66px);
+	background: url('./images/defaultBcg.jpeg') center/cover no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 2rem 1rem;
+	text-align: center;
+	letter-spacing: var(--mainSpacing);
+}
+.banner h1 {
+	font-size: 2.5rem;
+}
+.banner div {
+	width: 10rem;
+	height: 5px;
+	background: var(--primaryColor);
+	margin: 1.7rem auto;
+}
+.banner p {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+@media screen and (min-width: 576px) {
+	.banner {
+		padding: 2rem 3rem;
+	}
+	.banner h1 {
+		font-size: 3rem;
+	}
+}
+@media screen and (min-width: 992px) {
+	.banner {
+		padding: 2rem 6rem;
+	}
+	.banner h1 {
+		font-size: 4rem;
 	}
 }
