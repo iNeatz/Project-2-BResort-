@@ -8,6 +8,7 @@
 	--mainBlack: #222;
 	--mainSpacing: 3px;
 	--mainTransition: all 0.3s linear;
+	--lightGrey: #cfcfcf;
 }
 
 /* globals */
@@ -22,6 +23,16 @@ h1 {
 	font-size: 3rem;
 	line-height: 1;
 	margin-bottom: 0.5rem;
+}
+h4 {
+	font-size: 1.2rem;
+	line-height: 1.25;
+	margin-bottom: 1.25rem;
+}
+h6 {
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 1.5rem;
 }
 .primary-btn {
 	display: inline-block;
@@ -141,5 +152,63 @@ h1 {
 	}
 	.banner h1 {
 		font-size: 4rem;
+	}
+}
+
+/* TITLE */
+.section-title {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+.section-title h4 {
+	font-size: 2rem;
+	letter-spacing: var(--mainSpacing);
+	text-transform: capitalize;
+	margin-bottom: 1rem;
+}
+.section-title div {
+	width: 5rem;
+	height: 5px;
+	background: var(--primaryColor);
+	margin: 0 auto;
+}
+
+/* SERVICES */
+.services-container {
+	padding: 5rem 0;
+	background: var(--lightGrey);
+	text-align: center;
+}
+.services-grid {
+	width: 90vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+	row-gap: 2rem;
+	column-gap: 50px;
+}
+.service span {
+	display: inline-block;
+	color: var(--primaryColor);
+	font-size: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+.service h6 {
+	letter-spacing: var(--mainSpacing);
+	text-transform: capitalize;
+}
+.service p {
+	width: 80%;
+	margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+	.services-grid {
+		width: 95vw;
+		max-width: 1170px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.service p {
+		width: 100%;
 	}
 }
