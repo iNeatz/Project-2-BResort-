@@ -356,3 +356,82 @@ h6 {
 	font-weight: 700;
 	letter-spacing: var(--mainSpacing);
 }
+
+/* rooms list */
+.rooms-list-center {
+	width: 80vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	row-gap: 2rem;
+	column-gap: 40px;
+}
+
+/* room features */
+.room-details {
+	padding-top: 5rem;
+}
+.room-images {
+	width: 80vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	row-gap: 2rem;
+	column-gap: 50px;
+}
+.room-images img {
+	width: 100%;
+}
+.room-description {
+	display: flex;
+	width: 80vw;
+	margin: 2rem auto;
+	flex-direction: column;
+	row-gap: 1rem;
+	column-gap: 5rem;
+}
+.room-description h3 {
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+	font-size: 1.5rem;
+	margin: 1rem 0;
+}
+.details p {
+	line-height: 1.5;
+	text-align: justify;
+}
+.info h6 {
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+	font-weight: 300;
+}
+.details,
+.info {
+	flex: 1;
+}
+.room-extras {
+	width: 80vw;
+	margin: 0 auto 3rem;
+}
+.room-extras h6 {
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+}
+.extra-list {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+	column-gap: 2rem;
+	row-gap: 1rem;
+}
+@media screen and (min-width: 992px) {
+	.room-images,
+	.room-description,
+	.room-extras {
+		width: 95vw;
+		max-width: 1170px;
+	}
+	.room-description {
+		flex-direction: row;
+	}
+}
